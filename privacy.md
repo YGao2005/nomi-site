@@ -23,7 +23,7 @@ This policy applies to the Nomi Mac app and the Nomi server ("Nomi"). When we sa
 - **What you save.** Text Nomi reads from your screen, what you type or say to Nomi, and the notes and history Nomi makes from them.
 - **Pictures you circle.** Nomi keeps the part you circled and a small thumbnail. It never keeps a full screenshot.
 - **Conversations.** Your questions and Nomi's answers. Settings → Privacy & Data sets how long Nomi keeps them.
-- **Crash reports.** If Nomi stops unexpectedly, it keeps a short report with no content in it: the app version, the macOS version, and where in the code it stopped. Nothing is uploaded. You choose to send it to us by email. Nomi deletes reports after 7 days.
+- **Crash reports.** If Nomi stops unexpectedly, it keeps a short report with no content in it: the app version and build, the macOS version, the type of Mac, the error type, and where in the code it stopped. Nothing is uploaded. You choose to send it to us by email. Nomi deletes reports after 7 days.
 
 Nomi encrypts its database and saved pictures. The keys stay in your Mac's Keychain. Before Nomi saves text, it tries to remove card numbers, ID numbers, API keys, and one-time codes. This filter can miss things. Nomi does not read password fields, password managers, or private browser windows.
 
