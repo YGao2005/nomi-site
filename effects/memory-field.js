@@ -63,7 +63,7 @@ void main() {
     float age = uRipples[i].z;
     float r = age * 520.0;
     float d = length(px - uRipples[i].xy) - r;
-    float k = exp(-(d * d) / 260.0) * (1.0 - age / 1.4) * uDt * 9.0;
+    float k = exp(-(d * d) / 260.0) * (1.0 - age / 1.4) * uDt * 3.5;
     ink = min(1.0, ink + max(k, 0.0));
   }
   o = vec4(ink, hue, 0.0, 1.0);
@@ -107,25 +107,25 @@ void main() {
   vec2 a = abs(local);
   float d = min(abs(local.x - local.y), abs(local.x + local.y)) * 0.7071;
   float aa = 1.2 / (uCell * uDpr);
-  float th = 0.075 + 0.04 * ink;
+  float th = 0.055 + 0.02 * ink;
   float stitch = (1.0 - smoothstep(th - aa, th + aa, d))
                * (1.0 - smoothstep(arm - aa, arm + aa, max(a.x, a.y)));
   stitch *= smoothstep(0.03, 0.2, ink);
 
   float grain = hash12(floor(px * uDpr)) - 0.5;
-  float wash = clamp(glow + trPx.r * 0.16, 0.0, 1.0);
+  float wash = clamp(glow + trPx.r * 0.05, 0.0, 1.0);
   wash = clamp(wash * (1.0 + grain * 0.5) + grain / 255.0, 0.0, 1.0);
 
-  vec3 stitchCol = pal(n * 0.9 + trPx.g + 0.08) * 0.82;
-  float alpha = clamp(stitch * 0.95 + wash * (1.0 - stitch), 0.0, 1.0);
-  vec3 rgb = (stitchCol * stitch * 0.95 + col * wash * (1.0 - stitch));
+  vec3 stitchCol = pal(n * 0.9 + trPx.g + 0.08) * 0.92;
+  float alpha = clamp(stitch * 0.5 + wash * (1.0 - stitch), 0.0, 1.0);
+  vec3 rgb = (stitchCol * stitch * 0.5 + col * wash * (1.0 - stitch));
   o = vec4(rgb, alpha);
 }`;
 
   const DEFAULTS = {
-    cell: 9,
-    decay: 1.6,
-    reach: 26,
+    cell: 8,
+    decay: 1.1,
+    reach: 18,
     glowStrength: 0.55,
     palA: [0.78, 0.66, 0.62],
     palB: [0.22, 0.2, 0.24],
@@ -218,7 +218,7 @@ void main() {
       if (p.x < -60 || p.y < -60 || p.x > r.width + 60 || p.y > r.height + 60) { last = null; return; }
       if (last) {
         const len = Math.hypot(p.x - last.x, p.y - last.y);
-        const ink = Math.min(0.9, 0.12 + len / 60);
+        const ink = Math.min(0.5, 0.06 + len / 100);
         seg = seg ? { ...seg, x1: p.x, y1: p.y, ink: Math.max(seg.ink, ink) }
                   : { x0: last.x, y0: last.y, x1: p.x, y1: p.y, ink };
       }
