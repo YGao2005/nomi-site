@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nomi — effects preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="effects.css">
+<style>
+  :root{--paper:#f6f2ea;--ink:#1f1b18;--muted:#6b625a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif}
+  .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:18vh 24px 0;text-align:center}
+  h1,h2{font-family:"Instrument Serif",Georgia,serif;font-weight:400;margin:0;letter-spacing:-.01em}
+  h1{font-size:clamp(44px,7vw,88px);line-height:1}
+  .sub{max-width:520px;margin:22px auto 34px;font-size:18px;line-height:1.5;color:var(--muted)}
+  .cta{display:inline-block;background:var(--ink);color:var(--paper);padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:500}
+  .window{margin-top:9vh;width:min(880px,100%);height:300px;border-radius:18px 18px 0 0;background:#1d1a17;box-shadow:0 30px 80px -30px rgba(40,25,10,.45);display:flex;flex-direction:column;align-items:flex-start;padding:18px 22px;color:#b9afa4;font-size:14px;text-align:left;gap:12px}
+  .dots{display:flex;gap:7px}.dots i{width:11px;height:11px;border-radius:50%;background:#3a342e;display:block}
+  .q{background:#2a2521;border-radius:10px;padding:10px 14px;color:#e8e0d6}
+  .hint{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);font-size:13px;color:var(--muted);background:rgba(255,255,255,.6);padding:6px 12px;border-radius:999px;backdrop-filter:blur(6px)}
+  .section{padding:22vh 24px 30vh;max-width:1000px;margin:0 auto}
+  h2{font-size:clamp(34px,4.6vw,56px);line-height:1.1;max-width:900px}
+  .replay{margin-top:32px;font:inherit;font-size:14px;background:none;border:1px solid #cfc6ba;border-radius:999px;padding:8px 16px;cursor:pointer;color:var(--ink)}
+</style>
+</head>
+<body>
+  <section class="hero" data-memory-field>
+    <h1 data-stitch-reveal>Remembers what you see.</h1>
+    <p class="sub">Nomi is a Mac app that remembers what you see and answers from it. Your memory stays on your Mac.</p>
+    <a class="cta" href="#">Download for Mac</a>
+    <div class="window">
+      <div class="dots"><i></i><i></i><i></i></div>
+      <div class="q">What was the flight number Sam sent me on Tuesday?</div>
+      <div>UA 1342, SFO → JFK, departing 8:05 AM. From Sam's message in Slack, Tuesday 4:12 PM.</div>
+    </div>
+  </section>
+  <section class="section">
+    <h2 id="recall" data-stitch-reveal>Nomi quietly keeps track of what crosses your screen, so you can stop retracing your steps.</h2>
+    <button class="replay" onclick="StitchReveal.run(document.getElementById('recall'))">Replay</button>
+  </section>
+  <div class="hint">Move the mouse over the hero. Click for a ripple. Scroll for the text reveal.</div>
+  <script src="memory-field.js"></script>
+  <script src="stitch-reveal.js"></script>
+</body>
+</html>
