@@ -6,8 +6,9 @@
 <title>Nomi — effects preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Instrument+Serif&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="effects.css?v=3">
+<link rel="stylesheet" href="island.css?v=2">
 <style>
   :root{--paper:#f6f2ea;--ink:#1f1b18;--muted:#5f5750;--line:#e2dacf;--gutter:clamp(20px,5vw,76px)}
   *{box-sizing:border-box}
@@ -50,11 +51,7 @@
         <a class="btn btn-secondary" href="#recall">See it in action</a>
       </div>
       <div class="stage">
-        <div class="window">
-          <div class="dots"><i></i><i></i><i></i></div>
-          <div class="q">What was the flight number Sam sent me on Tuesday?</div>
-          <div>UA 1342, SFO → JFK, departing 8:05 AM. From Sam's message in Slack, Tuesday 4:12 PM.</div>
-        </div>
+        <div class="mac-mock" data-mac-island></div>
       </div>
     </div>
   </section>
@@ -65,5 +62,7 @@
   <div class="hint">Move the mouse over the hero. Click for a ripple. Scroll for the text reveal.</div>
   <script src="memory-field.js?v=3"></script>
   <script src="stitch-reveal.js?v=3"></script>
+  <script src="cat-sprites.js?v=1"></script>
+  <script src="island.js?v=3"></script>
 </body>
 </html>
