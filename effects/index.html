@@ -43,7 +43,14 @@
     .btn{height:44px;font-size:15px;padding:0 18px}
     .stage{border-radius:18px 18px 0 0;padding:20px 12px 0}
   }
-  @media (max-width:480px){.ctas .btn{flex:1 1 100%;justify-content:center}}
+  @media (max-width:480px){
+    .ctas{gap:6px;align-items:center}
+    .btn{height:42px;font-size:15px}
+    .btn-primary{gap:10px;padding:0 16px 0 6px}
+    .btn-primary .arrow{width:30px;height:30px}
+    .btn-secondary{background:none;border:0;padding:0 6px;gap:4px}
+    .btn-secondary::after{content:"";width:6px;height:6px;border:solid currentColor;border-width:1.5px 1.5px 0 0;rotate:45deg;margin-left:2px}
+  }
 </style>
 </head>
 <body>
