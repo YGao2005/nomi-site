@@ -7,34 +7,55 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="effects.css">
+<link rel="stylesheet" href="effects.css?v=3">
 <style>
-  :root{--paper:#f6f2ea;--ink:#1f1b18;--muted:#6b625a}
+  :root{--paper:#f6f2ea;--ink:#1f1b18;--muted:#5f5750;--line:#e2dacf;--gutter:clamp(20px,5vw,76px)}
   *{box-sizing:border-box}
   body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif}
-  .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:18vh 24px 0;text-align:center}
+  .wrap{max-width:1568px;margin:0 auto;padding:0 var(--gutter)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{font-weight:600;font-size:19px;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+  .nav .cta-sm{font-size:15px;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:500}
+  .hero{min-height:100vh;padding-top:72px}
   h1,h2{font-family:"Instrument Serif",Georgia,serif;font-weight:400;margin:0;letter-spacing:-.01em}
-  h1{font-size:clamp(44px,7vw,88px);line-height:1}
-  .sub{max-width:520px;margin:22px auto 34px;font-size:18px;line-height:1.5;color:var(--muted)}
-  .cta{display:inline-block;background:var(--ink);color:var(--paper);padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:500}
-  .window{margin-top:9vh;width:min(880px,100%);height:300px;border-radius:18px 18px 0 0;background:#1d1a17;box-shadow:0 30px 80px -30px rgba(40,25,10,.45);display:flex;flex-direction:column;align-items:flex-start;padding:18px 22px;color:#b9afa4;font-size:14px;text-align:left;gap:12px}
+  .hero-top{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:clamp(48px,12vh,140px) 0 48px;border-bottom:1px solid var(--line)}
+  h1{font-size:clamp(46px,5.6vw,84px);line-height:1;max-width:9.5em;text-wrap:balance}
+  .sub{justify-self:end;max-width:500px;margin:0;font-size:clamp(17px,1.45vw,21px);line-height:1.5;color:var(--muted)}
+  .ctas{display:flex;gap:14px;flex-wrap:wrap;padding:46px 0 46px}
+  .btn{display:inline-flex;align-items:center;gap:12px;height:46px;padding:0 20px;border-radius:999px;font-size:16px;font-weight:500;text-decoration:none}
+  .btn-primary{background:var(--ink);color:var(--paper);padding-left:7px}
+  .btn-primary .arrow{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--paper);color:var(--ink)}
+  .btn-secondary{background:rgba(255,255,255,.55);color:var(--ink);border:1px solid var(--line)}
+  .stage{border-radius:22px 22px 0 0;padding:clamp(24px,4.5vw,70px) clamp(16px,3vw,46px) 0;background:linear-gradient(180deg,#e9ddd0,#dccbbb);overflow:hidden}
+  .window{height:360px;border-radius:14px 14px 0 0;background:#1d1a17;box-shadow:0 30px 80px -30px rgba(40,25,10,.45);display:flex;flex-direction:column;align-items:flex-start;padding:18px 22px;color:#b9afa4;font-size:14px;text-align:left;gap:12px}
   .dots{display:flex;gap:7px}.dots i{width:11px;height:11px;border-radius:50%;background:#3a342e;display:block}
   .q{background:#2a2521;border-radius:10px;padding:10px 14px;color:#e8e0d6}
   .hint{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);font-size:13px;color:var(--muted);background:rgba(255,255,255,.6);padding:6px 12px;border-radius:999px;backdrop-filter:blur(6px)}
-  .section{padding:22vh 24px 30vh;max-width:1000px;margin:0 auto}
+  .section{padding:22vh var(--gutter) 30vh;max-width:1568px;margin:0 auto}
   h2{font-size:clamp(34px,4.6vw,56px);line-height:1.1;max-width:900px}
   .replay{margin-top:32px;font:inherit;font-size:14px;background:none;border:1px solid #cfc6ba;border-radius:999px;padding:8px 16px;cursor:pointer;color:var(--ink)}
+  @media (max-width:820px){.hero-top{grid-template-columns:1fr;gap:24px}.sub{justify-self:start}}
 </style>
 </head>
 <body>
+  <header class="wrap nav" style="position:absolute;inset:0 0 auto;z-index:2"><a class="brand" href="#">Nomi</a><a class="cta-sm" href="#">Download</a></header>
   <section class="hero" data-memory-field>
-    <h1 data-stitch-reveal>Remembers what you see.</h1>
-    <p class="sub">Nomi is a Mac app that remembers what you see and answers from it. Your memory stays on your Mac.</p>
-    <a class="cta" href="#">Download for Mac</a>
-    <div class="window">
-      <div class="dots"><i></i><i></i><i></i></div>
-      <div class="q">What was the flight number Sam sent me on Tuesday?</div>
-      <div>UA 1342, SFO → JFK, departing 8:05 AM. From Sam's message in Slack, Tuesday 4:12 PM.</div>
+    <div class="wrap">
+      <div class="hero-top">
+        <h1 data-stitch-reveal>Remembers what you see.</h1>
+        <p class="sub">Nomi is a Mac app that remembers what you see and answers from it. Your memory stays on your Mac.</p>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#"><span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>Download for Mac</a>
+        <a class="btn btn-secondary" href="#recall">See it in action</a>
+      </div>
+      <div class="stage">
+        <div class="window">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <div class="q">What was the flight number Sam sent me on Tuesday?</div>
+          <div>UA 1342, SFO → JFK, departing 8:05 AM. From Sam's message in Slack, Tuesday 4:12 PM.</div>
+        </div>
+      </div>
     </div>
   </section>
   <section class="section">
@@ -42,7 +63,7 @@
     <button class="replay" onclick="StitchReveal.run(document.getElementById('recall'))">Replay</button>
   </section>
   <div class="hint">Move the mouse over the hero. Click for a ripple. Scroll for the text reveal.</div>
-  <script src="memory-field.js"></script>
-  <script src="stitch-reveal.js"></script>
+  <script src="memory-field.js?v=3"></script>
+  <script src="stitch-reveal.js?v=3"></script>
 </body>
 </html>

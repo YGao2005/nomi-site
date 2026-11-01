@@ -4,9 +4,10 @@
 .memory-field-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent)}
 
 .stitch-word{white-space:nowrap}
-.stitch-dots{display:none;height:var(--stitch-height);vertical-align:var(--stitch-descent);overflow:visible;fill:none;stroke:var(--stitch-thread,currentColor);stroke-linecap:round}
-[data-stitch-reveal][data-state=stitching] .stitch-char:not([data-shown]) .stitch-dots{display:inline-block}
-[data-stitch-reveal][data-state=stitching] .stitch-char:not([data-shown]) .stitch-letter{display:none}
+.stitch-char{position:relative}
+.stitch-dots{display:none;position:absolute;left:0;top:0;height:var(--stitch-height);overflow:visible;fill:none;stroke:var(--stitch-thread,currentColor);stroke-linecap:round}
+[data-stitch-reveal][data-state=stitching] .stitch-char:not([data-shown]) .stitch-dots{display:block}
+[data-stitch-reveal][data-state=stitching] .stitch-char:not([data-shown]) .stitch-letter{color:transparent}
 .stitch-char[data-shown] .stitch-letter{animation:stitch-settle .22s ease-out}
 @keyframes stitch-settle{from{color:var(--stitch-thread,currentColor)}}
 [data-js] [data-stitch-reveal]:not([data-state]) .stitch-letter{color:transparent}
