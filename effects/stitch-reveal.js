@@ -84,7 +84,8 @@
     const ctx = document.createElement("canvas").getContext("2d", { willReadFrequently: true });
     if (!ctx) return done();
 
-    const start = () => {
+    const start = () => setTimeout(stitch, +el.dataset.stitchDelay || 0);
+    const stitch = () => {
       const cs = getComputedStyle(el);
       const font = `${cs.fontStyle} ${cs.fontWeight} ${SAMPLE}px ${cs.fontFamily}`;
       ctx.font = font;
@@ -95,7 +96,7 @@
       const cellEm = cap / 9;
       el.style.setProperty("--stitch-height", `${m.height}em`);
       el.style.setProperty("--stitch-descent", `${-descent}em`);
-      el.style.setProperty("--stitch-thread", THREADS[Math.floor(Math.random() * THREADS.length)]);
+      el.style.setProperty("--stitch-thread", el.dataset.stitchThread || THREADS[Math.floor(Math.random() * THREADS.length)]);
       const cache = new Map();
       const items = chars.map((c, i) => {
         if (!cache.has(c.el.dataset.char)) cache.set(c.el.dataset.char, stitchFrames(ctx, c.el.dataset.char, m, cellEm));

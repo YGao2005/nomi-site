@@ -312,11 +312,13 @@
       sync(); draw();
       return;
     }
+    let ready = false;
+    setTimeout(() => { ready = true; if (visible) loop(); }, +host.dataset.startDelay || 0);
     new IntersectionObserver(([e]) => {
       const was = visible; visible = e.isIntersecting;
-      if (visible && !was) loop(); else if (!visible) run++;
+      if (visible && !was && ready) loop(); else if (!visible) run++;
     }).observe(host);
-    sync(); requestAnimationFrame(tick); loop();
+    sync(); requestAnimationFrame(tick);
   }
 
   window.MacIsland = { mount };
