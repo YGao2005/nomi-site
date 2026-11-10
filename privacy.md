@@ -1,6 +1,7 @@
 ---
 title: Privacy policy
 permalink: /privacy
+redirect_from: /privacy-policy
 ---
 
 # Privacy policy

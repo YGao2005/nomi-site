@@ -1,6 +1,7 @@
 ---
 title: Terms of Service
 permalink: /terms
+redirect_from: /terms-of-service
 ---
 
 # Terms of Service
