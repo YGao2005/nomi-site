@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div class="notice-card">
+  <canvas class="notice-cat" aria-hidden="true"></canvas>
+{{ content }}
+</div>
+<script src="{{ '/assets/home/cat-sprites.js' | relative_url }}"></script>
+<script>
+  (() => {
+    const rows = window.NomiCatSprites && window.NomiCatSprites.upright, canvas = document.querySelector(".notice-cat");
+    if (!rows || !canvas) return;
+    const cell = 5, cols = Math.max(...rows.map(r => r.length)), dpr = Math.ceil(devicePixelRatio || 1);
+    canvas.style.width = cols * cell + "px"; canvas.style.height = rows.length * cell + "px";
+    canvas.width = cols * cell * dpr; canvas.height = rows.length * cell * dpr;
+    const ctx = canvas.getContext("2d");
+    ctx.scale(dpr, dpr); ctx.strokeStyle = "#1f1b18"; ctx.lineWidth = 1.25; ctx.lineCap = "round";
+    rows.forEach((row, y) => [...row].forEach((c, x) => {
+      if (c !== "x") return;
+      const a = x * cell + 1, b = y * cell + 1, s = cell - 2;
+      ctx.beginPath(); ctx.moveTo(a, b); ctx.lineTo(a + s, b + s); ctx.moveTo(a + s, b); ctx.lineTo(a, b + s); ctx.stroke();
+    }));
+  })();
+</script>

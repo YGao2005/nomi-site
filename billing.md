@@ -1,6 +1,7 @@
 ---
 title: Back to Nomi
 permalink: /billing
+layout: notice
 ---
 
 # You can go back to Nomi
