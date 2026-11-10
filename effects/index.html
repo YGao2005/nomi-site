@@ -54,7 +54,6 @@
   .window{height:360px;border-radius:14px 14px 0 0;background:#1d1a17;box-shadow:0 30px 80px -30px rgba(40,25,10,.45);display:flex;flex-direction:column;align-items:flex-start;padding:18px 22px;color:#b9afa4;font-size:14px;text-align:left;gap:12px}
   .dots{display:flex;gap:7px}.dots i{width:11px;height:11px;border-radius:50%;background:#3a342e;display:block}
   .q{background:#2a2521;border-radius:10px;padding:10px 14px;color:#e8e0d6}
-  .section{padding:22vh var(--gutter) 18vh;max-width:1568px;margin:0 auto}
   h2{font-size:clamp(34px,4.6vw,56px);line-height:1.1;max-width:900px}
   [data-intro] .site-header{opacity:0}
   [data-intro] [data-stitch-reveal]:not([data-state]){color:transparent}
@@ -112,15 +111,12 @@
       </div>
       <div class="ctas">
         <a class="btn btn-primary" data-rise style="--d:1.15s" href="#"><span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>Download for Mac</a>
-        <a class="btn btn-secondary" href="#recall" data-rise style="--d:1.25s">See it in action</a>
+        <a class="btn btn-secondary" href="#demo" data-rise style="--d:1.25s">See it in action</a>
       </div>
-      <div class="stage">
+      <div class="stage" id="demo">
         <div class="mac-mock" data-mac-island data-start-delay="2900"></div>
       </div>
     </div>
-  </section>
-  <section class="section">
-    <h2 id="recall" data-stitch-reveal>Nomi quietly keeps track of what crosses your screen, so you can stop retracing your steps.</h2>
   </section>
   <footer class="wrap footer">
     <span>© 2026 Nomi</span>
