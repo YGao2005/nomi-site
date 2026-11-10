@@ -180,9 +180,9 @@
 
   function mount(host, opts = {}) {
     const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const story = { question: "What was the flight number Sam sent me on Tuesday?", answer: "UA 1342, SFO to JFK, departing 8:05 AM. Sam sent it in Slack on Tuesday at 4:12 PM.", ...opts };
+    const story = { question: "What was the flight number Sam sent me on Tuesday?", answer: "UA 1342, SFO to JFK, departing 8:05 AM. Sam sent it in Slack on Tuesday at 4:12 PM.", flight: "UA 1342", departs: "8:05 AM", ...opts };
     host.classList.add("mi");
-    host.innerHTML = `<div class="mi-screen"><div class="mi-menubar"><div class="mi-menu-left"><span class="mi-apple"></span><b>Finder</b><span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Window</span><span>Help</span></div><div class="mi-menu-right"><svg width="18" height="14" viewBox="0 0 18 14" fill="currentColor"><path d="M9 11.6 10.6 10a2.3 2.3 0 0 0-3.2 0Zm-3-3a4.3 4.3 0 0 1 6 0l1.2-1.2a6 6 0 0 0-8.4 0Zm-2.6-2.6a8 8 0 0 1 11.2 0l1.2-1.2a9.7 9.7 0 0 0-13.6 0Z"/></svg><svg width="26" height="13" viewBox="0 0 26 13"><rect x=".5" y=".5" width="22" height="12" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="16" height="9" rx="2" fill="currentColor"/><path d="M24 4.5v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2Z" fill="currentColor" opacity=".45"/></svg><svg width="16" height="14" viewBox="0 0 16 14" fill="currentColor"><rect x="1" y="2" width="14" height="3.6" rx="1.8"/><rect x="1" y="8.4" width="14" height="3.6" rx="1.8" opacity=".55"/></svg><span>Sat Nov 1&nbsp;&nbsp;11:12 AM</span></div></div><div class="mi-island" aria-hidden="true"><canvas class="mi-cat"></canvas><div class="mi-indicator"></div><div class="mi-utility">${svg("files")}${svg("desktop")}${svg("settings")}</div><div class="mi-card-area"></div></div></div>`;
+    host.innerHTML = `<div class="mi-screen"><div class="mi-menubar"><div class="mi-menu-left"><span class="mi-apple"></span><b>Finder</b><span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Window</span><span>Help</span></div><div class="mi-menu-right"><svg width="18" height="14" viewBox="0 0 18 14" fill="currentColor"><path d="M9 11.6 10.6 10a2.3 2.3 0 0 0-3.2 0Zm-3-3a4.3 4.3 0 0 1 6 0l1.2-1.2a6 6 0 0 0-8.4 0Zm-2.6-2.6a8 8 0 0 1 11.2 0l1.2-1.2a9.7 9.7 0 0 0-13.6 0Z"/></svg><svg width="26" height="13" viewBox="0 0 26 13"><rect x=".5" y=".5" width="22" height="12" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="16" height="9" rx="2" fill="currentColor"/><path d="M24 4.5v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2Z" fill="currentColor" opacity=".45"/></svg><svg width="16" height="14" viewBox="0 0 16 14" fill="currentColor"><rect x="1" y="2" width="14" height="3.6" rx="1.8"/><rect x="1" y="8.4" width="14" height="3.6" rx="1.8" opacity=".55"/></svg><span>Sat Nov 1&nbsp;&nbsp;11:12 AM</span></div></div><div class="mi-win"><div class="mi-win-bar"><i></i><i></i><i></i><span>Trip planner</span></div><div class="mi-win-body"><div class="mi-win-h">New York, Nov 7–10</div><div class="mi-win-sub">2 travelers · 3 nights</div><div class="mi-form"><div class="mi-f"><span class="mi-l">From</span><span class="mi-v">San Francisco (SFO)</span></div><div class="mi-f"><span class="mi-l">To</span><span class="mi-v">New York (JFK)</span></div><div class="mi-f mi-focus" data-f="flight"><span class="mi-l">Flight</span><span class="mi-v" data-ph="Flight number"></span></div><div class="mi-f" data-f="time"><span class="mi-l">Departs</span><span class="mi-v" data-ph="Time"></span></div></div></div></div><div class="mi-island" aria-hidden="true"><canvas class="mi-cat"></canvas><div class="mi-indicator"></div><div class="mi-utility">${svg("files")}${svg("desktop")}${svg("settings")}</div><div class="mi-card-area"></div></div></div>`;
     const screen = host.querySelector(".mi-screen"), island = host.querySelector(".mi-island");
     const canvas = host.querySelector(".mi-cat"), indicator = host.querySelector(".mi-indicator"), area = host.querySelector(".mi-card-area");
     const scale = Math.max(2, Math.round(devicePixelRatio || 1));
@@ -190,6 +190,12 @@
     const ctx = canvas.getContext("2d");
     const clock = () => performance.now() / 1000;
 
+    const fields = { flight: host.querySelector('[data-f="flight"]'), time: host.querySelector('[data-f="time"]') };
+    const fill = (f, text, typing) => {
+      f.querySelector(".mi-v").textContent = text;
+      f.classList.toggle("filled", !!text);
+      f.classList.toggle("typing", !!typing);
+    };
     const state = { phase: "resting", mood: "idle", pointer: false, card: null, cardHeight: 0 };
     const [fx0, fy0] = feet("resting");
     const motion = new Motion({ w: G.restW, h: G.restH, r: G.restingRadius, fx: fx0, fy: fy0 });
@@ -287,7 +293,10 @@
     async function play(id) {
       const s = { question: story.question, typed: "", status: null, answer: "", done: false };
       state.phase = "resting"; state.mood = "idle"; setCard(null); sync(CLOSE);
-      await wait(1800, id);
+      host.classList.add("mi-clearing");
+      await wait(300, id);
+      fill(fields.flight, ""); fill(fields.time, ""); host.classList.remove("mi-clearing");
+      await wait(1500, id);
       phase("expanded", "idle"); setCard("question", s);
       await wait(900, id);
       await stream(story.question.length, 52, n => { s.typed = story.question.slice(0, n); setCard("question", s); }, id);
@@ -300,15 +309,21 @@
       const words = story.answer.split(" ");
       await stream(words.length, 60, n => { s.answer = words.slice(0, n).join(" "); setCard("answer", s); }, id);
       s.done = true; setCard("answer", s);
-      await wait(4200, id);
+      await wait(2800, id);
       state.mood = "idle"; phase("resting", "idle"); setCard(null);
-      await wait(2200, id);
+      await wait(600, id);
+      for (const [f, text] of [[fields.flight, story.flight], [fields.time, story.departs]]) {
+        await stream(text.length, 85, n => fill(f, text.slice(0, n), true), id);
+        fill(f, text); await wait(350, id);
+      }
+      await wait(2600, id);
     }
     const loop = async () => { const id = ++run; try { for (;;) await play(id); } catch {} };
 
     if (still) {
       state.phase = "expanded"; state.mood = "answering";
       setCard("answer", { question: story.question, answer: story.answer, done: true });
+      fill(fields.flight, story.flight); fill(fields.time, story.departs);
       sync(); draw();
       return;
     }

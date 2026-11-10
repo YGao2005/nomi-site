@@ -1,5 +1,5 @@
 .mi{position:relative;overflow:hidden;border-radius:18px 18px 0 0;background:#000}
-.mi-screen{position:absolute;left:50%;top:0;height:360px;translate:-50% 0;transform-origin:top center;margin-left:0;overflow:hidden;border:9px solid #0b0b0c;border-bottom:0;border-radius:18px 18px 0 0;box-sizing:border-box;
+.mi-screen{position:absolute;left:50%;top:0;height:470px;translate:-50% 0;transform-origin:top center;margin-left:0;overflow:hidden;border:9px solid #0b0b0c;border-bottom:0;border-radius:18px 18px 0 0;box-sizing:border-box;
   background:
     radial-gradient(120% 90% at 18% 110%,#3d6fd6 0%,transparent 55%),
     radial-gradient(90% 80% at 85% 100%,#7b8fe8 0%,transparent 60%),
@@ -55,4 +55,22 @@
 @keyframes mi-blink{50%{opacity:0}}
 .mi-send{width:32px;height:32px;flex:none;display:grid;place-items:center;border-radius:6px;background:#333;color:#777}
 .mi-send.ready{background:#EBEAEA;color:#26251E}
+.mi-win{position:absolute;left:50%;top:204px;translate:-50% 0;width:min(560px,90%);height:320px;background:#fbfbfc;border-radius:12px;box-shadow:0 0 0 .5px rgba(0,0,0,.18),0 24px 60px -12px rgba(10,30,80,.45);font:400 13px/1.35 -apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;color:#1d1d1f;overflow:hidden}
+.mi-win-bar{position:relative;height:38px;display:flex;align-items:center;gap:8px;padding:0 14px;border-bottom:1px solid #ececee;background:#f4f4f6}
+.mi-win-bar i{width:12px;height:12px;border-radius:50%;background:#ff5f57;box-shadow:inset 0 0 0 .5px rgba(0,0,0,.12)}
+.mi-win-bar i:nth-child(2){background:#febc2e}.mi-win-bar i:nth-child(3){background:#28c840}
+.mi-win-bar span{position:absolute;left:0;right:0;text-align:center;font-weight:600;font-size:13px;color:#4a4a4f;pointer-events:none}
+.mi-win-body{padding:18px 22px}
+.mi-win-h{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.mi-win-sub{margin-top:2px;color:#86868b;font-size:12px}
+.mi-form{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;margin-top:16px}
+.mi-f{display:flex;flex-direction:column;gap:5px}
+.mi-l{font-size:11px;font-weight:500;color:#86868b}
+.mi-v{height:30px;display:flex;align-items:center;padding:0 10px;border-radius:7px;background:#fff;box-shadow:inset 0 0 0 1px #dcdce0;white-space:nowrap;transition:opacity .3s}
+.mi-v:empty::before{content:attr(data-ph);color:#b4b4ba}
+.mi-focus .mi-v{box-shadow:inset 0 0 0 1px #6f9cf2,0 0 0 3px rgba(10,110,255,.22)}
+.mi-f.typing .mi-v::after{content:"";width:1px;height:15px;margin-left:1px;background:#1d1d1f}
+.mi-f.filled:not(.typing) .mi-v{animation:mi-filled 1.2s ease-out}
+@keyframes mi-filled{from{background:#e6f0ff}}
+.mi-clearing .mi-f .mi-v{opacity:0}
 @media (prefers-reduced-motion:reduce){.mi-spinner,.mi-dots i,.mi-caret{animation:none}}
