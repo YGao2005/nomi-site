@@ -3,15 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nomi — effects preview</title>
-<link rel="preload" href="fonts/DMSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<title>Nomi — Remembers what you see.</title>
+<meta name="description" content="Nomi is a Mac app that remembers what you see and answers from it. Your memory stays on your Mac.">
+<link rel="preload" href="assets/home/fonts/DMSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
 <script>matchMedia("(prefers-reduced-motion: reduce)").matches || (document.documentElement.dataset.intro = "")</script>
-<link rel="stylesheet" href="effects.css?v=4">
-<link rel="stylesheet" href="island.css?v=5">
+<link rel="stylesheet" href="assets/home/effects.css?v=4">
+<link rel="stylesheet" href="assets/home/island.css?v=5">
 <style>
-  @font-face{font-family:"DM Sans";src:url(fonts/DMSans-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
-  @font-face{font-family:Inter;src:url(fonts/Inter-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
-  @font-face{font-family:Inter;src:url(fonts/Inter-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+  @font-face{font-family:"DM Sans";src:url(assets/home/fonts/DMSans-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+  @font-face{font-family:Inter;src:url(assets/home/fonts/Inter-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+  @font-face{font-family:Inter;src:url(assets/home/fonts/Inter-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
   :root{--out:cubic-bezier(.16,1,.3,1);--paper:#f6f2ea;--ink:#1f1b18;--muted:#5f5750;--line:#e2dacf;--gutter:clamp(20px,5vw,76px)}
   *{box-sizing:border-box}
   body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif}
@@ -90,7 +91,7 @@
 <body>
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="#" aria-label="Nomi home">Nomi</a>
+      <a class="brand" href="./" aria-label="Nomi home">Nomi</a>
       <nav class="links" id="site-nav" aria-label="Primary">
         <a href="#" aria-current="page">Home</a>
         <a href="#use-cases">Use cases</a>
@@ -98,7 +99,7 @@
         <a href="#blog">Blog</a>
       </nav>
       <div class="nav-end">
-        <a class="cta-sm" href="#">Download</a>
+        <a class="cta-sm" href="https://github.com/YGao2005/nomi-releases/releases">Download</a>
         <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><i></i><i></i></button>
       </div>
     </div>
@@ -110,7 +111,7 @@
         <p class="sub" data-stitch-reveal data-stitch-delay="650" data-stitch-thread="#b3a597">Nomi is a Mac app that remembers what you see and answers from it. Your memory stays on your Mac.</p>
       </div>
       <div class="ctas">
-        <a class="btn btn-primary" data-rise style="--d:1.15s" href="#"><span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>Download for Mac</a>
+        <a class="btn btn-primary" data-rise style="--d:1.15s" href="https://github.com/YGao2005/nomi-releases/releases"><span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>Download for Mac</a>
         <a class="btn btn-secondary" href="#demo" data-rise style="--d:1.25s">See it in action</a>
       </div>
       <div class="stage" id="demo">
@@ -121,13 +122,13 @@
   <footer class="wrap footer">
     <span>© 2026 Nomi</span>
     <nav aria-label="Legal">
-      <a href="../privacy">Privacy</a>
-      <a href="../terms">Terms</a>
+      <a href="privacy">Privacy</a>
+      <a href="terms">Terms</a>
       <a href="mailto:yang@get-nomi.app">Contact</a>
     </nav>
   </footer>
-  <script src="memory-field.js?v=3"></script>
-  <script src="stitch-reveal.js?v=4"></script>
+  <script src="assets/home/memory-field.js?v=3"></script>
+  <script src="assets/home/stitch-reveal.js?v=4"></script>
   <script>
     const header = document.querySelector(".site-header"), menu = header.querySelector(".menu-btn");
     const setMenu = open => { header.toggleAttribute("data-open", open); menu.setAttribute("aria-expanded", open); };
@@ -137,7 +138,7 @@
     const html = document.documentElement;
     if ("intro" in html.dataset) requestAnimationFrame(() => requestAnimationFrame(() => { html.dataset.intro = "go"; }));
   </script>
-  <script src="cat-sprites.js?v=1"></script>
-  <script src="island.js?v=5"></script>
+  <script src="assets/home/cat-sprites.js?v=1"></script>
+  <script src="assets/home/island.js?v=5"></script>
 </body>
 </html>
