@@ -15,10 +15,10 @@ General clauses keep the 37signals wording, with our name swapped in. Text was r
 
 ## Not from the template (review these first)
 
-- **Terms:** the age minimum (18), one account per person, the Pro price and renewal, the failed-payment grace period, promo codes, daily limits, "Your content" items 3 and 4, the app licence and feedback items, AI Answers and Actions, the Nomi-specific use restrictions, Third-Party Services, the liability cap (the larger of 12 months' fees or $50), and Governing Law (California, Santa Clara County).
+- **Terms:** the age minimum (13, with a parent or guardian's permission under 18), one account per person, the Pro price and renewal, the failed-payment grace period, promo codes, daily limits, "Your content" items 3 and 4, the app licence and feedback items, AI Answers and Actions, the Nomi-specific use restrictions, Third-Party Services, the liability cap (the larger of 12 months' fees or $50), and Governing Law (California, Santa Clara County).
 - **Privacy:** the short version, what stays on your Mac, the provider table under "What leaves your Mac", what our server keeps, usage stats, Mac permissions, Age, and what happens when you delete content.
 
 ## Left out of the template
 
 - **Terms:** the API terms, the SLA and status page, the "until the end of the Internet" promise, 37signals' CCPA "service provider" clause and its GDPR DPA, and the "disparage the company" use restriction.
-- **Privacy:** CAPTCHA, ad and cookie tracking (we do neither), customer end-user data, the CCPA notice at collection, and EU transfers under a DPA with Standard Contractual Clauses. Nomi has no DPA. A lawyer should decide what Nomi needs for GDPR/UK GDPR and the CCPA.
+- **Privacy:** CAPTCHA, ad and cookie tracking (we do neither), customer end-user data, the CCPA notice at collection, and EU transfers under a DPA with Standard Contractual Clauses. Nomi has no DPA. A lawyer should decide what Nomi needs for GDPR/UK GDPR and the CCPA, including the higher digital-consent age (up to 16) in some EU countries.

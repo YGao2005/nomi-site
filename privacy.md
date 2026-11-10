@@ -150,7 +150,7 @@ Depending on applicable law, you may have the right to appeal our decision to de
 
 ## Age
 
-Nomi is for people 18 years or older. We do not knowingly collect data from children. If you think a child gave us data, email us and we will delete it.
+Nomi is for people 13 years or older. If you are under 18, you need the permission of a parent or guardian to use Nomi. We do not knowingly collect data from children under 13. If you think a child under 13 gave us data, email us and we will delete it.
 
 ## How we secure your data
 

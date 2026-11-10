@@ -28,7 +28,7 @@ If you violate any of the Terms, we may terminate your account. That’s a broad
 2. You may not use the Services for any purpose outlined in the [Use Restrictions](#use-restrictions) below.
 3. You are responsible for all content and activity that occurs under your account, including actions that you approve Nomi to take.
 4. You must be a human. Accounts registered by “bots” or other automated methods are not permitted.
-5. You must be 18 years or older to use the Services. One person, one account: you may not share or resell your account.
+5. You must be at least 13 years old to use the Services. If you are under 18, or under the age of majority where you live, you may use Nomi only with the permission of a parent or guardian, who agrees to these Terms for you. One person, one account: you may not share or resell your account.
 
 ## Payment, Refunds, and Plan Changes
 
