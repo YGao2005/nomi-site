@@ -1,15 +1,18 @@
 ---
 title: Privacy policy
 permalink: /privacy
+redirect_from: /privacy-policy
 ---
 
 # Privacy policy
 
-*Last updated: October 28, 2026*
+*Last updated: November 10, 2026*
 
-The privacy of your data — and it is your data, not ours! — is a big deal to us. Nomi sees your screen, so we built it to keep your memory on your Mac. In this policy, we lay out: what data we collect and why; what leaves your Mac; how your data is handled; and your rights with respect to your data. We promise we never sell your data: never have, never will.
+The privacy of your data — and it is your data, not ours! — is a big deal to us. In this policy, we lay out: what data we collect and why; how your data is handled; and your rights with respect to your data. We promise we never sell your data: never have, never will.
 
-This policy applies to the Nomi Mac app and the Nomi server ("Nomi"). When we say "we", "our", or "us", we mean Yang Gao, a sole proprietor in California, USA, doing business as Nomi.
+This policy applies to the Nomi Mac app, the Nomi server, and our websites (together, “Nomi”). When we say “we”, “our”, or “us”, we mean Yang Gao, a sole proprietor in California, USA, doing business as Nomi.
+
+This policy applies to our handling of information about site visitors and people who use Nomi. We refer collectively to these categories of individuals as “you” throughout this policy.
 
 ## The short version
 
@@ -18,7 +21,13 @@ This policy applies to the Nomi Mac app and the Nomi server ("Nomi"). When we sa
 - **Our server keeps your account, not your content.** It keeps your email, your plan, and usage counts. It does not store what you see, say, type, or save.
 - **No selling, no ads, no training.** We do not sell your data, show you ads, or use your content to train AI models.
 
-## What stays on your Mac
+## What we collect and why
+
+Our guiding principle is to collect only what we need. Here’s what that means in practice:
+
+### What stays on your Mac
+
+Unlike most products, Nomi does not store the content of your memory on our servers. It stays on your Mac:
 
 - **What you save.** Text Nomi reads from your screen, what you type or say to Nomi, and the notes and history Nomi makes from them.
 - **Pictures you circle.** Nomi keeps the part you circled and a small thumbnail. It never keeps a full screenshot.
@@ -27,7 +36,21 @@ This policy applies to the Nomi Mac app and the Nomi server ("Nomi"). When we sa
 
 Nomi encrypts its database and saved pictures. The keys stay in your Mac's Keychain. Before Nomi saves text, it tries to remove card numbers, ID numbers, API keys, and one-time codes. This filter can miss things. Nomi does not read password fields, password managers, or private browser windows.
 
-## What leaves your Mac, and why
+### Identity and access
+
+When you sign up for Nomi, we ask for your email address. If you sign in with Google, we also receive your Google name and picture. That’s so you can sign in to your account, and we can send you essential information about your account.
+
+We’ll never sell your personal information to third parties, and we won’t use your name in marketing statements without your permission either.
+
+### Billing information
+
+If you buy Pro, you will be asked to provide your payment information. Credit card information is submitted directly to our payment processor, Stripe, and doesn’t hit Nomi servers. We store the Stripe customer ID, the subscription ID, and the subscription status, for purposes of account history and billing support. To offer the student price, we check that your confirmed sign-in email ends in `.edu`.
+
+### General geolocation data
+
+We log sign-ins to your account, which can include your IP address, for security and fraud prevention purposes, and we keep this login data for as long as your account is active.
+
+### What leaves your Mac, and why
 
 Nomi sends content only to do something you asked for or turned on.
 
@@ -50,7 +73,7 @@ Nomi sends content only to do something you asked for or turned on.
 
 If we add a feature that sends data to a new provider, we update this list before the feature ships.
 
-## What our server keeps
+### What our server keeps
 
 | Data | Why | How long |
 |---|---|---|
@@ -62,59 +85,97 @@ If we add a feature that sends data to a new provider, we update this list befor
 
 Our server passes your requests to the providers above. It does not store or log their content or the answers.
 
-## Usage stats
+### Usage stats
 
 Nomi sends counts, like which setup steps you finished and how often you use the Nomi key. It never sends what you see, say, type, or save, and never app names, window titles, web addresses, file names, or your email. Usage stats use a random install ID that is not linked to your account, and carry the day, not the time. We do not store your IP address with them. Raw events are deleted after 90 days; daily totals with no ID are kept. Usage stats are on by default. Turn them off in Settings → Privacy & Data, which also deletes the install ID and any unsent events.
 
-## Billing information
+### Website interactions, advertising, and cookies
 
-When you buy Pro, you give your card details to Stripe, not to us. Card information never touches our servers. We keep the Stripe customer ID, the subscription ID, and the subscription status. To offer the student price, we check that your confirmed sign-in email ends in `.edu`.
+Our website does not use analytics, advertising scripts, or cookies. It is hosted by GitHub Pages, which may log visits, including your IP address, under [GitHub’s privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). We do not show ads in Nomi, and we do not use your data for advertising.
+
+### Voluntary correspondence
+
+When you email us with a question or to ask for help, or send us a crash report, we keep that correspondence, including your email address, so that we have a history of past correspondence to reference if you reach out in the future.
+
+We also store information you may volunteer, for example, written responses to surveys. If you agree to a customer interview, we may ask for your permission to record the conversation for future reference or use. We will only do so with your express consent.
+
+### How we approach Mac permissions
+
+Because of how macOS is designed, Nomi must request your consent before it can use Screen Recording, Accessibility, and the microphone. Consent is always optional, though the features that need a permission will not work without it. You can turn each permission off at any time in macOS System Settings → Privacy & Security.
 
 ## When we access or disclose your information
 
-**To provide the service.** We use the providers named above to run Nomi.
+**To provide products or services you’ve requested.** We use some third-party subprocessors to help run Nomi and provide the Services to you. They are listed, with what each one receives, under [What leaves your Mac, and why](#what-leaves-your-mac-and-why) above.
 
-**At your direction.** When you connect a Google app, data moves between Google, Composio, and Nomi as you ask.
+We may disclose your information at your direction if you integrate a third-party service into your use of Nomi. For example, if you connect a Google app, data moves between Google, Composio, and Nomi as you ask, as described above.
 
-**To help you, with your permission.** No human at Nomi sees your content, which lives on your Mac. If you send us a crash report or a support email, we read what you sent.
+No Nomi human looks at your content except for limited purposes with your express permission. Your memory lives on your Mac, and we cannot see it. If you send us a crash report or a support email, we read what you sent. We may also access your account data if required in order to respond to legal process (see “When required under applicable law” below).
 
-**To investigate abuse.** We look at account and usage records if we see an attack or a breach of our [Terms](terms).
+**To help you troubleshoot or squash a software bug, with your permission.** If at any point we need to access your content to help you with a support case, we will ask for your consent before proceeding.
 
-**When required by law.** We are a US business, and our server is in the US. We share account data only when compelled by valid US legal process, and we tell you first unless the law forbids it. Your memory is on your Mac, so we cannot hand it over.
+**To investigate, prevent, or take action regarding [restricted uses](terms#use-restrictions).** Accessing a customer’s account when investigating potential abuse is a measure of last resort. We want to protect the privacy and safety of both our customers and the people reporting issues to us, and we do our best to balance those responsibilities throughout the process. If we discover you are using Nomi for a restricted purpose, we will take action as necessary, including notifying appropriate authorities where warranted.
 
-If Nomi is ever sold or merged, we will tell you before your personal information moves to a different privacy policy.
+**Aggregated and de-identified data.** We may aggregate and/or de-identify information collected through the services, such as the daily usage totals described above. We may use de-identified or aggregated data for any purpose, including marketing or analytics.
+
+**When required under applicable law.** Nomi is a U.S. business and our server is located in the U.S. Your memory is on your Mac, so we cannot hand it over.
+
+* Requests for user data. Our policy is to not respond to government requests for user data unless we are compelled by legal process or in limited circumstances in the event of an emergency request. However, if U.S. law enforcement authorities have the necessary warrant, criminal subpoena, or court order requiring us to disclose data, we must comply. Likewise, we will only respond to requests from government authorities outside the U.S. if compelled by the U.S. government through procedures outlined in a mutual legal assistance treaty or agreement. It is Nomi’s policy to notify affected users before we disclose data unless we are legally prohibited from doing so, and except in some emergency cases.
+
+* Preservation requests. Similarly, Nomi’s policy is to comply with requests to preserve data only if compelled by the U.S. Federal Stored Communications Act, 18 U.S.C. Section 2703(f), or by a properly served U.S. subpoena for civil matters. We do not disclose preserved data unless required by law or compelled by a court order that we choose not to appeal. Furthermore, unless we receive a proper warrant, court order, or subpoena before the required preservation period expires, we will destroy any preserved copies of customer data at the end of the preservation period.
+
+* If we are audited by a tax authority, we may be required to disclose billing-related information. If that happens, we will disclose only the minimum needed.
+
+Finally, if Nomi is acquired by or merges with another company — we don’t plan on that, but if it happens — we’ll notify you well before any of your personal information is transferred or becomes subject to a different privacy policy.
 
 ## Your rights with respect to your information
 
-We give the same rights to everyone, wherever you live:
+At Nomi, we strive to apply the same data rights to all customers, regardless of their location. Some of these rights include:
 
-- **Know and access.** This policy lists what we collect. Ask us for a copy of what our server keeps about you.
-- **Correct.** Ask us to fix your account data.
-- **Delete.** Email us from your account's email address and ask us to delete your account. Within 30 days we delete your account, plan, and usage counts, and remove your connected-app access at Composio. Stripe keeps the payment records the law requires. Data on your Mac stays until you delete it there.
-- **Turn things off.** Web search and usage stats have switches in Settings → Privacy & Data. Microphone and screen access have switches in macOS System Settings.
-- **Object or complain.** You can object to how we use your data, and complain to your data protection authority.
-- **Non-discrimination.** Using these rights never changes your price or our service to you.
+* **Right to Know.** You have the right to know what personal information is collected, used, shared or sold. We outline both the categories and specific bits of data we collect, as well as how they are used, in this privacy policy.
+* **Right of Access.** This includes your right to access the personal information we gather about you, and your right to obtain information about the sharing, storage, security and processing of that information. You can ask us for a copy of what our server keeps about you.
+* **Right to Correction.** You have the right to request correction of your personal information.
+* **Right to Erasure / “To Be Forgotten”.** This is your right to request, subject to certain limitations under applicable law, that your personal information be erased from our possession and, by extension, from all of our service providers. To delete your account, email us from your account’s email address. Within 30 days we delete your account, plan, and usage counts, and remove your connected-app access at Composio. Stripe keeps the payment records the law requires. Data on your Mac stays until you delete it there.
+* **Right to Complain.** You have the right to make a complaint regarding our handling of your personal information with the appropriate supervisory authority.
+* **Right to Restrict Processing.** This is your right to request restriction of how and why your personal information is used or processed, including opting out of sale of your personal information. (Again: we never have and never will sell your personal data.) Web search and usage stats have switches in Settings → Privacy & Data.
+* **Right to Object.** You have the right, in certain situations, to object to how or why your personal information is processed.
+* **Right to Portability.** You have the right to receive the personal information we have about you and the right to transmit it to another party.
+* **Right to not Be Subject to Automated Decision-Making.** You have the right to object to and prevent any decision that could have a legal or similarly significant effect on you from being made solely based on automated processes. This right is limited if the decision is necessary for performance of any contract between you and us, is allowed by applicable law, or is based on your explicit consent.
+* **Right to Non-Discrimination.** We do not and will not charge you a different amount to use our products, offer you different discounts, or give you a lower level of customer service because you have exercised your data privacy rights. However, the exercise of certain rights may, by virtue of your exercising those rights, prevent you from using our Services.
 
-To use these rights, email [yang@get-nomi.app](mailto:yang@get-nomi.app). We may confirm your identity first, by checking that the request comes from your account's email address.
+Please note that certain information may be exempt from such requests under applicable law. For example, we need to retain certain information in order to provide our services to you.
+
+In some cases, we also need to take reasonable steps to verify your identity before responding to a request, which may include checking that the request comes from your account’s email address. If we are unable to verify you, we may be unable to respond to your requests. If you have questions about exercising these rights or need assistance, please contact us at [yang@get-nomi.app](mailto:yang@get-nomi.app). If an authorized agent is corresponding on your behalf, we will need written consent with a signature from the account holder before proceeding.
+
+Depending on applicable law, you may have the right to appeal our decision to deny your request, if applicable. We will provide information about how to exercise that right in our response denying the request. You also have the right to lodge a complaint with a supervisory authority. If you are in the EU or UK, you can contact your data protection authority to file a complaint or learn more about local privacy laws.
 
 ## Age
 
-Nomi is for people 18 years or older. We do not knowingly collect data from children. If you think a child gave us data, email us and we will delete it.
+Nomi is for people 13 years or older. If you are under 18, you need the permission of a parent or guardian to use Nomi. We do not knowingly collect data from children under 13. If you think a child under 13 gave us data, email us and we will delete it.
 
 ## How we secure your data
 
-Data moving between your Mac and our server is encrypted with TLS. Your memory is encrypted on your Mac with keys kept in the Keychain. Provider keys stay on our server and never reach your Mac. Encryption does not protect your data if someone has full control of your Mac. No system is perfectly secure; if a breach affects your personal data, we will tell you as the law requires.
+All data is encrypted via [SSL/TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) when transmitted between Nomi and our server. In addition, we go to great lengths to secure your data at rest: your memory is encrypted on your Mac with keys kept in the Keychain. Provider keys stay on our server and never reach your Mac. Encryption does not protect your data if someone has full control of your Mac. No system is perfectly secure; if a breach affects your personal data, we will tell you as the law requires.
 
-## Location of data
+## What happens when you delete content
 
-Nomi is run from the United States, and our server and providers process data in the United States. If you are outside the United States, the information you send to our server goes to the United States.
+Your memory lives on your Mac. We do not keep a copy, so we cannot restore anything you delete there. Copies may remain in your own backups, such as Time Machine.
+
+If you delete your account, we delete your account data from our server within 30 days, as described under “Right to Erasure” above.
+
+## Data retention
+
+We keep your information for the time necessary for the purposes for which it is processed. The length of time for which we retain information depends on the purposes for which we collected and use it and your choices, after which time we may delete and/or aggregate it. We may also retain and use this information as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements. Through this policy, we have provided specific retention periods for certain types of information.
+
+## Location of site and data
+
+Nomi is operated in the United States, and our server and providers process data in the United States. If you are located in the European Union, UK, or elsewhere outside of the United States, **please be aware that any information you send to our server will be transferred to and stored in the United States**. By using our websites or Services and/or providing us with your personal information, you consent to this transfer.
 
 ## Changes and questions
 
-Nomi is new and will change, and this policy will change with it. We will update the date at the top, and for a significant change we will tell you in the app or by email before it applies.
+We may update this policy as needed to comply with relevant regulations and reflect any new practices. You can view a history of the changes to this policy [on GitHub](https://github.com/YGao2005/nomi-site/commits/main/privacy.md). Whenever we make a significant change to our policies, we will refresh the date at the top of this page and tell you in the app or by email before the change applies.
 
-Questions about this policy, your data, or your rights? Email [yang@get-nomi.app](mailto:yang@get-nomi.app).
+Have any questions, comments, or concerns about this privacy policy, your data, or your rights with respect to your information? Please get in touch by emailing us at [yang@get-nomi.app](mailto:yang@get-nomi.app) and we’ll be happy to try to answer them!
 
 ---
 
-*Adapted from the [37signals policies](https://github.com/basecamp/policies), used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). We changed the text to describe Nomi.*
+*Based on the [37signals policies](https://github.com/basecamp/policies), used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). We changed the text to describe Nomi. The original text and a comparison are [in our repository](https://github.com/YGao2005/nomi-site/tree/main/_legal-source).*
