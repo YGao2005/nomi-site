@@ -8,3 +8,4 @@ defaults:
       path: ""
     values:
       layout: default
+exclude: [vercel.json, Gemfile, Gemfile.lock, vendor, node_modules]
