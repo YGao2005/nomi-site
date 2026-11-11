@@ -1,7 +1,7 @@
 {
   "framework": "jekyll",
   "installCommand": "bundle install",
-  "buildCommand": "PAGES_REPO_NWO=YGao2005/nomi-site JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config.vercel.yml",
+  "buildCommand": "LANG=C.UTF-8 LC_ALL=C.UTF-8 PAGES_REPO_NWO=YGao2005/nomi-site JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config.vercel.yml",
   "outputDirectory": "_site",
   "cleanUrls": true
 }
