@@ -6,7 +6,7 @@ redirect_from: /privacy-policy
 
 # Privacy policy
 
-*Last updated: November 10, 2026*
+*Last updated: November 19, 2026*
 
 The privacy of your data — and it is your data, not ours! — is a big deal to us. In this policy, we lay out: what data we collect and why; how your data is handled; and your rights with respect to your data. We promise we never sell your data: never have, never will.
 
@@ -38,7 +38,7 @@ Nomi encrypts its database and saved pictures. The keys stay in your Mac's Keych
 
 ### Identity and access
 
-When you sign up for Nomi, we ask for your email address. If you sign in with Google, we also receive your Google name and picture. That’s so you can sign in to your account, and we can send you essential information about your account.
+When you sign up for Nomi, we ask for your email address. If you sign in with Google, we also receive your Google name and picture. That’s so you can sign in to your account, and we can send you essential information about your account. If you tell Nomi your name, during setup or in Settings → Account, we keep it with your account, so Nomi uses it on each Mac you sign in to.
 
 We’ll never sell your personal information to third parties, and we won’t use your name in marketing statements without your permission either.
 
@@ -61,7 +61,7 @@ Nomi sends content only to do something you asked for or turned on.
 | Your voice while you hold the Nomi key | Deepgram, through our server | While you speak | No (zero data retention, training off) |
 | Web search queries | Firecrawl and its search provider, through our server | When an answer needs the web | **Yes.** See below |
 | Requests to Gmail, Google Calendar, Drive, or Docs | Composio, through our server | Only after you connect an app, when you ask or approve | **Yes.** See below |
-| Your email address and sign-in | Supabase (our server host) | When you sign in | Yes, for your account |
+| Your email address, the name you give Nomi, and sign-in | Supabase (our server host) | When you sign in or change your name | Yes, for your account |
 | Payment details | Stripe | When you buy Pro | Yes, by Stripe |
 | Usage counts with a random install ID | Our server | About once an hour, if usage stats are on | Yes, 90 days |
 
@@ -77,7 +77,7 @@ If we add a feature that sends data to a new provider, we update this list befor
 
 | Data | Why | How long |
 |---|---|---|
-| Email address, sign-in method, Google name and picture (if you sign in with Google), and sign-in logs that can include your IP address | Your account and security | While your account is active |
+| Email address, sign-in method, the name you give Nomi, Google name and picture (if you sign in with Google), and sign-in logs that can include your IP address | Your account and security | While your account is active |
 | Plan, promo code use, and Stripe customer and subscription IDs | Your plan and billing | While your account is active |
 | AI usage counts per day (calls, tokens, cost — no content) | Limits and cost control | 30 days |
 | Which apps you connected, and a random ID for you at Composio | Connected apps | Until you disconnect or delete your account |
@@ -132,13 +132,13 @@ Finally, if Nomi is acquired by or merges with another company — we don’t pl
 At Nomi, we strive to apply the same data rights to all customers, regardless of their location. Some of these rights include:
 
 * **Right to Know.** You have the right to know what personal information is collected, used, shared or sold. We outline both the categories and specific bits of data we collect, as well as how they are used, in this privacy policy.
-* **Right of Access.** This includes your right to access the personal information we gather about you, and your right to obtain information about the sharing, storage, security and processing of that information. You can ask us for a copy of what our server keeps about you.
-* **Right to Correction.** You have the right to request correction of your personal information.
-* **Right to Erasure / “To Be Forgotten”.** This is your right to request, subject to certain limitations under applicable law, that your personal information be erased from our possession and, by extension, from all of our service providers. To delete your account, email us from your account’s email address. Within 30 days we delete your account, plan, and usage counts, and remove your connected-app access at Composio. Stripe keeps the payment records the law requires. Data on your Mac stays until you delete it there.
+* **Right of Access.** This includes your right to access the personal information we gather about you, and your right to obtain information about the sharing, storage, security and processing of that information. In the app, Settings → Privacy & Data → Export my data saves a copy of what our server keeps about you, together with what Nomi keeps on your Mac. You can also ask us for a copy.
+* **Right to Correction.** You have the right to request correction of your personal information. You can change your name in Settings → Account.
+* **Right to Erasure / “To Be Forgotten”.** This is your right to request, subject to certain limitations under applicable law, that your personal information be erased from our possession and, by extension, from all of our service providers. To delete your account, use Settings → Account → Delete account in the app. You type DELETE, then a code that we email you. Nomi then cancels a paid plan at once, with no refund for the rest of the period; deletes your account, name, plan, and usage counts from our server; removes your connected-app access at Composio; and deletes what Nomi keeps on that Mac. You can also email us from your account’s email address, and we do the same within 30 days. Stripe keeps the payment records the law requires. Another Mac where you used Nomi keeps its data until you delete it there.
 * **Right to Complain.** You have the right to make a complaint regarding our handling of your personal information with the appropriate supervisory authority.
 * **Right to Restrict Processing.** This is your right to request restriction of how and why your personal information is used or processed, including opting out of sale of your personal information. (Again: we never have and never will sell your personal data.) Web search and usage stats have switches in Settings → Privacy & Data.
 * **Right to Object.** You have the right, in certain situations, to object to how or why your personal information is processed.
-* **Right to Portability.** You have the right to receive the personal information we have about you and the right to transmit it to another party.
+* **Right to Portability.** You have the right to receive the personal information we have about you and the right to transmit it to another party. Export my data saves it as JSON files.
 * **Right to not Be Subject to Automated Decision-Making.** You have the right to object to and prevent any decision that could have a legal or similarly significant effect on you from being made solely based on automated processes. This right is limited if the decision is necessary for performance of any contract between you and us, is allowed by applicable law, or is based on your explicit consent.
 * **Right to Non-Discrimination.** We do not and will not charge you a different amount to use our products, offer you different discounts, or give you a lower level of customer service because you have exercised your data privacy rights. However, the exercise of certain rights may, by virtue of your exercising those rights, prevent you from using our Services.
 
@@ -160,7 +160,7 @@ All data is encrypted via [SSL/TLS](https://en.wikipedia.org/wiki/Transport_Laye
 
 Your memory lives on your Mac. We do not keep a copy, so we cannot restore anything you delete there. Copies may remain in your own backups, such as Time Machine.
 
-If you delete your account, we delete your account data from our server within 30 days, as described under “Right to Erasure” above.
+If you delete your account in the app, we delete your account data from our server at once. If you ask by email, we do it within 30 days. See “Right to Erasure” above.
 
 ## Data retention
 
