@@ -15,7 +15,7 @@ General clauses keep the 37signals wording, with our name swapped in. Text was r
 
 ## Not from the template (review these first)
 
-- **Terms:** the age minimum (13, with a parent or guardian's permission under 18), one account per person, the Pro and Max prices and renewal, the failed-payment grace period, promo codes, daily limits, "Your content" items 3 and 4, the app licence and feedback items, AI Answers and Actions, the Nomi-specific use restrictions, Third-Party Services, the liability cap (the larger of 12 months' fees or $50), and Governing Law (California, Santa Clara County).
+- **Terms:** the age minimum (13, with a parent or guardian's permission under 18), one account per person, the Pro and Max prices and renewal, the no-refund policy (replaces the 37signals fair refund policy), the failed-payment grace period, promo codes, daily limits, "Your content" items 3 and 4, the app licence and feedback items, AI Answers and Actions, the Nomi-specific use restrictions, Third-Party Services, the liability cap (the larger of 12 months' fees or $50), and Governing Law (California, Santa Clara County).
 - **Privacy:** the short version, what stays on your Mac, the provider table under "What leaves your Mac", what our server keeps, usage stats, Mac permissions, Age, and what happens when you delete content.
 
 ## Left out of the template

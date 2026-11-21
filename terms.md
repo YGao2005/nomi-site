@@ -40,30 +40,17 @@ If you violate any of the Terms, we may terminate your account. That’s a broad
 6. A promo code gives Pro until the date on the code. Each account can use a code once. Codes have no cash value. We can stop a code at any time; Pro that a code already gave stays until its date.
 7. Daily limits apply on every plan, including Pro and Max, to protect the Services.
 8. All fees are exclusive of all taxes, levies, or duties imposed by taxing authorities. Where required, we will collect those taxes on behalf of the taxing authority and remit those taxes to taxing authorities. Otherwise, you are responsible for payment of all taxes, levies, or duties.
-9. We process refunds according to our fair refund policy below.
+9. Refunds are covered under Refunds below.
 
-### A fair refund policy
+### Refunds
 
-Bad refund policies are infuriating. You feel like the company is just trying to rip you off. We never want our customers to feel that way, so our refund policy is simple: If you’re ever unhappy with Nomi for any reason, just [email us](mailto:yang@get-nomi.app) and we’ll take care of you.
-
-Examples of full refunds we’d grant:
-
-* If you were just charged for your next month of service but you meant to cancel, we’re happy to refund that extra charge.
-* If you forgot to cancel a couple months ago and you haven’t used Nomi since then, we’ll give you a full refund for a few back months. No problem.
-* If you tried Pro for a couple months and you just weren’t happy with it, you can have your money back.
-
-Examples of partial refunds or credits we’d grant:
-
-* If you forgot to cancel a year ago, and you’ve used Nomi since then, we’ll review your account usage and figure out a partial refund based on how many months you used it.
-* If we had extended downtime (multiple hours in a day, or multiple days in a month) or you emailed us and it took multiple days to get back to you, we’d issue a partial credit to your account.
-
-At the end of the day, nearly everything on the edges comes down to a case-by-case basis. [Send us a note](mailto:yang@get-nomi.app), tell us what’s up, and we’ll work with you to make sure you’re happy.
+Payments are not refundable, except where the law requires a refund. When you cancel a paid plan, we stop future charges and the plan stays on until the end of the period you paid for. If you delete your account, Nomi cancels a paid plan at once, with no refund for the rest of the period. If you think we charged you by mistake, [email us](mailto:yang@get-nomi.app).
 
 ## Cancellation and Termination
 
-1. You are solely responsible for properly canceling your account. You can cancel a paid plan at any time in the app (Plan → Manage), no questions asked. An email request to cancel a paid plan is not automatically considered cancellation. To delete your account, email us from your account’s email address. If you need help canceling, you can always [contact us](mailto:yang@get-nomi.app).
+1. You are solely responsible for properly canceling your account. You can cancel a paid plan at any time in the app (Plan → Manage), no questions asked. An email request to cancel a paid plan is not automatically considered cancellation. To delete your account, use Settings → Account → Delete account in the app, or email us from your account’s email address. Deleting your account cancels a paid plan at once, with no refund. If you need help canceling, you can always [contact us](mailto:yang@get-nomi.app).
 2. When you delete your account, we delete your account data from our server within 30 days, as described in our [Privacy policy](privacy). We cannot recover this information once it has been permanently deleted. Your memory is stored on your Mac, not on our server, so it stays on your Mac until you delete it there.
-3. If you cancel a paid plan before the end of your current paid-up month or year, you will not be charged again, and the plan stays on until the end of the period you paid for. Then your account goes back to the free plan. We do not automatically prorate unused time in the last billing cycle. See our fair refund policy above.
+3. If you cancel a paid plan before the end of your current paid-up month or year, you will not be charged again, and the plan stays on until the end of the period you paid for. Then your account goes back to the free plan. We do not prorate or refund unused time in the last billing cycle. See Refunds above.
 4. We have the right to suspend or terminate your account and refuse any and all current or future use of our Services for any reason at any time. Suspension means you will not be able to access the account. Termination will furthermore result in the deletion of your account or your access to your account. We also reserve the right to refuse the use of the Services to anyone for any reason at any time. We have this clause because statistically speaking, out of all the accounts on our Services, there may be at least one doing something nefarious. There are some things we staunchly stand against and this clause is how we exercise that stance. For more details, see our [Use Restrictions](#use-restrictions).
 5. Verbal, physical, written or other abuse (including threats of abuse or retribution) of anyone who works on Nomi will result in immediate account termination.
 
