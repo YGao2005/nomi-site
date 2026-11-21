@@ -12,7 +12,7 @@
 
   const G = {
     notch: { w: 185, h: 32 }, wing: 41.5, drop: 6, expandedWidth: 540, maxCard: 420,
-    restingRadius: 10, radius: 22, edge: 24, mascotSlot: 52, indicator: 16, indicatorTrailing: 11,
+    restingRadius: 10, radius: 22, edge: 24, mascotSlot: 52,
   };
   G.restW = G.notch.w + 2 * G.wing;
   G.restH = G.notch.h + G.drop;
@@ -25,21 +25,15 @@
   // CatPose + CatAnimator (IslandKit/CatPose.swift)
   const posture = p => (p === "asleep" || p === "noticing" ? "lying" : "sitting");
   const poseFor = (mood, phase) => {
-    if (phase !== "expanded") return mood === "idle" || phase === "hidden" ? "asleep" : "noticing";
-    return { idle: "upright", peek: "upright", listening: "listening", answering: "speaking", thinking: "laptop",
-      waiting: "question", unsure: "question", searching: "searching" }[mood];
+    if (phase === "resting") return mood === "idle" ? "asleep" : "noticing";
+    return { idle: "upright", answering: "speaking", thinking: "laptop", searching: "searching" }[mood];
   };
   const clip = (...pairs) => pairs;
   const WAKE = clip(["noticing", .07], ["chestUp", .11], ["pushUp", .11], ["stretch", .13]);
   const LIE_DOWN = clip(["pushUp", .06], ["chestUp", .07], ["noticing", .09]);
   const LOOPS = {
-    listening: clip(["listening", .6], ["listenFar", .15], ["listenMid", .15], ["listenNear", .15], ["listening", .5],
-      ["listenRightEar", .14], ["listening", .7], ["listenFar", .15], ["listenMid", .15], ["listenNear", .15],
-      ["listening", .5], ["listenLeftEar", .14], ["listening", .4]),
     laptop: clip(["laptop", .16], ["laptopPawUp", .14], ["laptopKey2", .16], ["laptopPawUp", .14], ["laptop", .7], ["laptopPawUp", .14]),
     speaking: clip(["speakNear", .13], ["speaking", .13], ["speakFar", .13], ["speakNear", .13], ["speaking", .13], ["speakFar", .13], ["upright", .6]),
-    question: clip(["questionDraw1", .09], ["questionDraw2", .09], ["questionDraw3", .09], ["questionDraw4", .09],
-      ["question", .5], ["questionEar", .7], ["question", .9], ["upright", .4]),
     searching: clip(["searching", .5], ["searchRise", .16], ["searchMid", .16], ["searchFar", .5], ["searchMid", .16], ["searchRise", .16]),
   };
   const ENTRIES = {
@@ -158,11 +152,9 @@
     }
   }
 
-  const ICON_FILE = { files: "IslandFiles", desktop: "IslandDesktop", settings: "IslandSettings", search: "IslandSearch", up: "IslandArrowUp", spinner: "IslandSpinner" };
+  const ICON_FILE = { files: "IslandFiles", desktop: "IslandDesktop", settings: "IslandSettings", search: "IslandSearch", up: "IslandArrowUp" };
   const base = (document.currentScript?.src || location.href).replace(/[^/]*$/, "");
-  const svg = (name, cls = "") => `<i class="mi-ic ${cls}" style="--ic:url('${base}island-icons/${ICON_FILE[name]}.svg')"></i>`;
-  const SPINNER = svg("spinner", "mi-spinner");
-  const WAVE = '<span class="mi-wave">' + [4.286, 10, 7.143, 12.857, 5.714].map(h => `<i style="height:${h}px"></i>`).join("") + "</span>";
+  const svg = name => `<i class="mi-ic" style="--ic:url('${base}island-icons/${ICON_FILE[name]}.svg')"></i>`;
   const DOTS = '<span class="mi-dots"><i></i><i></i><i></i></span>';
   const esc = s => s.replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c]);
   const field = (placeholder, text) => `<div class="mi-field-row"><div class="mi-field${text ? " has-text" : ""}">${text ? `<span class="t-small">${esc(text)}</span><i class="mi-caret"></i>` : `<span class="t-caption sec">${placeholder}</span>`}</div><span class="mi-send${text ? " ready" : ""}">${svg("up")}</span></div>`;
@@ -182,9 +174,9 @@
     const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
     const story = { question: "What was the flight number Sam sent me on Tuesday?", answer: "UA 1342, SFO to JFK, departing 8:05 AM. Sam sent it in Slack on Tuesday at 4:12 PM.", flight: "UA 1342", departs: "8:05 AM", ...opts };
     host.classList.add("mi");
-    host.innerHTML = `<div class="mi-screen"><div class="mi-menubar"><div class="mi-menu-left"><span class="mi-apple"></span><b>Finder</b><span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Window</span><span>Help</span></div><div class="mi-menu-right"><svg width="18" height="14" viewBox="0 0 18 14" fill="currentColor"><path d="M9 11.6 10.6 10a2.3 2.3 0 0 0-3.2 0Zm-3-3a4.3 4.3 0 0 1 6 0l1.2-1.2a6 6 0 0 0-8.4 0Zm-2.6-2.6a8 8 0 0 1 11.2 0l1.2-1.2a9.7 9.7 0 0 0-13.6 0Z"/></svg><svg width="26" height="13" viewBox="0 0 26 13"><rect x=".5" y=".5" width="22" height="12" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="16" height="9" rx="2" fill="currentColor"/><path d="M24 4.5v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2Z" fill="currentColor" opacity=".45"/></svg><svg width="16" height="14" viewBox="0 0 16 14" fill="currentColor"><rect x="1" y="2" width="14" height="3.6" rx="1.8"/><rect x="1" y="8.4" width="14" height="3.6" rx="1.8" opacity=".55"/></svg><span>Sat Nov 1&nbsp;&nbsp;11:12 AM</span></div></div><div class="mi-win"><div class="mi-win-bar"><i></i><i></i><i></i><span>Trip planner</span></div><div class="mi-win-body"><div class="mi-win-h">New York, Nov 7–10</div><div class="mi-win-sub">2 travelers · 3 nights</div><div class="mi-form"><div class="mi-f"><span class="mi-l">From</span><span class="mi-v">San Francisco (SFO)</span></div><div class="mi-f"><span class="mi-l">To</span><span class="mi-v">New York (JFK)</span></div><div class="mi-f mi-focus" data-f="flight"><span class="mi-l">Flight</span><span class="mi-v" data-ph="Flight number"></span></div><div class="mi-f" data-f="time"><span class="mi-l">Departs</span><span class="mi-v" data-ph="Time"></span></div></div></div></div><div class="mi-island" aria-hidden="true"><canvas class="mi-cat"></canvas><div class="mi-indicator"></div><div class="mi-utility">${svg("files")}${svg("desktop")}${svg("settings")}</div><div class="mi-card-area"></div></div></div>`;
+    host.innerHTML = `<div class="mi-screen"><div class="mi-menubar"><div class="mi-menu-left"><span class="mi-apple"></span><b>Finder</b><span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Window</span><span>Help</span></div><div class="mi-menu-right"><svg width="18" height="14" viewBox="0 0 18 14" fill="currentColor"><path d="M9 11.6 10.6 10a2.3 2.3 0 0 0-3.2 0Zm-3-3a4.3 4.3 0 0 1 6 0l1.2-1.2a6 6 0 0 0-8.4 0Zm-2.6-2.6a8 8 0 0 1 11.2 0l1.2-1.2a9.7 9.7 0 0 0-13.6 0Z"/></svg><svg width="26" height="13" viewBox="0 0 26 13"><rect x=".5" y=".5" width="22" height="12" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="16" height="9" rx="2" fill="currentColor"/><path d="M24 4.5v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2Z" fill="currentColor" opacity=".45"/></svg><svg width="16" height="14" viewBox="0 0 16 14" fill="currentColor"><rect x="1" y="2" width="14" height="3.6" rx="1.8"/><rect x="1" y="8.4" width="14" height="3.6" rx="1.8" opacity=".55"/></svg><span>Sat Nov 1&nbsp;&nbsp;11:12 AM</span></div></div><div class="mi-win"><div class="mi-win-bar"><i></i><i></i><i></i><span>Trip planner</span></div><div class="mi-win-body"><div class="mi-win-h">New York, Nov 7–10</div><div class="mi-win-sub">2 travelers · 3 nights</div><div class="mi-form"><div class="mi-f"><span class="mi-l">From</span><span class="mi-v">San Francisco (SFO)</span></div><div class="mi-f"><span class="mi-l">To</span><span class="mi-v">New York (JFK)</span></div><div class="mi-f mi-focus" data-f="flight"><span class="mi-l">Flight</span><span class="mi-v" data-ph="Flight number"></span></div><div class="mi-f" data-f="time"><span class="mi-l">Departs</span><span class="mi-v" data-ph="Time"></span></div></div></div></div><div class="mi-island" aria-hidden="true"><canvas class="mi-cat"></canvas><div class="mi-utility">${svg("files")}${svg("desktop")}${svg("settings")}</div><div class="mi-card-area"></div></div></div>`;
     const screen = host.querySelector(".mi-screen"), island = host.querySelector(".mi-island");
-    const canvas = host.querySelector(".mi-cat"), indicator = host.querySelector(".mi-indicator"), area = host.querySelector(".mi-card-area");
+    const canvas = host.querySelector(".mi-cat"), area = host.querySelector(".mi-card-area");
     const scale = Math.max(2, Math.round(devicePixelRatio || 1));
     canvas.width = canvas.height = 68 * scale;
     const ctx = canvas.getContext("2d");
@@ -196,7 +188,7 @@
       f.classList.toggle("filled", !!text);
       f.classList.toggle("typing", !!typing);
     };
-    const state = { phase: "resting", mood: "idle", pointer: false, card: null, cardHeight: 0 };
+    const state = { phase: "resting", mood: "idle", pointer: false, cardHeight: 0 };
     const [fx0, fy0] = feet("resting");
     const motion = new Motion({ w: G.restW, h: G.restH, r: G.restingRadius, fx: fx0, fy: fy0 });
     const cat = new CatAnimator("asleep");
@@ -211,9 +203,6 @@
     const sync = mode => {
       const p = poseFor(displayMood(), state.phase);
       if (still) cat.pose = p; else cat.show(p, clock());
-      const ind = state.phase === "resting" && { listening: WAVE, searching: svg("search"), thinking: SPINNER }[state.mood];
-      if (ind && indicator.dataset.kind !== state.mood) { indicator.innerHTML = ind; indicator.dataset.kind = state.mood; }
-      indicator.classList.toggle("on", !!ind);
       island.classList.toggle("expanded", state.phase === "expanded");
       if (mode) motion.to(targets(), still ? null : mode, clock());
       if (still || !mode) Object.assign(motion.v, targets());
