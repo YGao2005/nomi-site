@@ -6,7 +6,7 @@ redirect_from: /privacy-policy
 
 # Privacy policy
 
-*Last updated: November 19, 2026*
+*Last updated: November 21, 2026*
 
 The privacy of your data — and it is your data, not ours! — is a big deal to us. In this policy, we lay out: what data we collect and why; how your data is handled; and your rights with respect to your data. We promise we never sell your data: never have, never will.
 
@@ -57,6 +57,7 @@ Nomi sends content only to do something you asked for or turned on.
 | What | Sent to | When | Kept by them? |
 |---|---|---|---|
 | Text and circled pictures, to answer you or understand what you saved | OpenAI, through our server | When you ask or save | No (zero data retention) |
+| A picture of the front window (passwords and flagged text blacked out), what's on screen there, and your request, for a Teach or Show walkthrough | Anthropic | During a walkthrough you start | No (zero data retention) |
 | Text turned into search vectors for your memory | OpenAI, through our server | After you save | No (zero data retention) |
 | Your voice while you hold the Nomi key | Deepgram, through our server | While you speak | No (zero data retention, training off) |
 | Web search queries | Firecrawl and its search provider, through our server | When an answer needs the web | **Yes.** See below |
