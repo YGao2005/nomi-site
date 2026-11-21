@@ -252,7 +252,7 @@
       const cells = still ? CELLS[cat.pose] : cat.cells(clock());
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "#F4F3EF";
-      const dots = scale >= 2 ? [[0, 0], [2, 0], [1, 1], [0, 2], [2, 2]] : [[0, 0], [1, 1]];
+      const dots = [[0, 0], [2, 0], [1, 1], [0, 2], [2, 2]];
       for (const [x, up] of cells) {
         const px = x * 2 * scale, py = (68 - (up + 1) * 2) * scale;
         for (const [dx, dy] of dots) ctx.fillRect(px + dx, py + dy, 1, 1);
