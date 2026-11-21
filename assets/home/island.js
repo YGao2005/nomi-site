@@ -168,7 +168,7 @@
   const field = (placeholder, text) => `<div class="mi-field-row"><div class="mi-field${text ? " has-text" : ""}">${text ? `<span class="t-small">${esc(text)}</span><i class="mi-caret"></i>` : `<span class="t-caption sec">${placeholder}</span>`}</div><span class="mi-send${text ? " ready" : ""}">${svg("up")}</span></div>`;
 
   const CARDS = {
-    question: s => `<div class="mi-stack"><div><div class="t-title">What do you need help with today?</div><div class="t-caption sec">Press control ^ and option to chat verbally or type below</div></div>${field("Ask Nomi", s.typed)}</div>`,
+    question: s => `<div class="mi-stack"><div><div class="t-title">What do you need help with today?</div><div class="t-caption sec">Hold fn to talk, double-tap to point, or type below</div></div>${field("Ask Nomi", s.typed)}</div>`,
     answer: s => {
       const status = s.status && `<div class="mi-status t-caption sec">${s.status === "thinking" ? "Nomi is thinking" + DOTS : "Nomi is Searching" + svg("search")}</div>`;
       const turn = s.answer
