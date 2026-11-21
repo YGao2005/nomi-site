@@ -33,12 +33,12 @@ If you violate any of the Terms, we may terminate your account. That’s a broad
 ## Payment, Refunds, and Plan Changes
 
 1. If you are using the free version of Nomi, it is really free: we do not ask you for your credit card and — just like for customers who pay for our Services — we do not sell your data. The free plan has daily limits, which we may change.
-2. Pro costs $20 per month or $192 per year, plus any tax, unless the app shows a different price before you buy. Students with a confirmed `.edu` sign-in email get 50% off when the app offers it.
-3. Pro renews automatically at the end of each month or year. Our payment processor, Stripe, charges your payment method in advance at the start of each period until you cancel. You can cancel online at any time in the app (Plan → Manage).
-4. If you are upgrading from the free plan to Pro, we will charge your card immediately and your billing cycle starts on the day of upgrade.
-5. If a payment fails, Pro stays on for 7 days while Stripe tries again. If you still do not pay, your account goes back to the free plan.
+2. Nomi has two paid plans. Pro costs $12 per month or $120 per year. Max costs $50 per month or $500 per year. Prices are plus any tax, unless the app shows a different price before you buy. Students who sign in with a school email get 25% off Pro monthly when the app offers it.
+3. Paid plans renew automatically at the end of each month or year. Our payment processor, Stripe, charges your payment method in advance at the start of each period until you cancel. You can cancel online at any time in the app (Plan → Manage).
+4. If you are upgrading from the free plan to a paid plan, we will charge your card immediately and your billing cycle starts on the day of upgrade.
+5. If a payment fails, your paid plan stays on for 7 days while Stripe tries again. If you still do not pay, your account goes back to the free plan.
 6. A promo code gives Pro until the date on the code. Each account can use a code once. Codes have no cash value. We can stop a code at any time; Pro that a code already gave stays until its date.
-7. Daily limits apply on every plan, including Pro, to protect the Services.
+7. Daily limits apply on every plan, including Pro and Max, to protect the Services.
 8. All fees are exclusive of all taxes, levies, or duties imposed by taxing authorities. Where required, we will collect those taxes on behalf of the taxing authority and remit those taxes to taxing authorities. Otherwise, you are responsible for payment of all taxes, levies, or duties.
 9. We process refunds according to our fair refund policy below.
 
@@ -61,9 +61,9 @@ At the end of the day, nearly everything on the edges comes down to a case-by-ca
 
 ## Cancellation and Termination
 
-1. You are solely responsible for properly canceling your account. You can cancel Pro at any time in the app (Plan → Manage), no questions asked. An email request to cancel Pro is not automatically considered cancellation. To delete your account, email us from your account’s email address. If you need help canceling, you can always [contact us](mailto:yang@get-nomi.app).
+1. You are solely responsible for properly canceling your account. You can cancel a paid plan at any time in the app (Plan → Manage), no questions asked. An email request to cancel a paid plan is not automatically considered cancellation. To delete your account, email us from your account’s email address. If you need help canceling, you can always [contact us](mailto:yang@get-nomi.app).
 2. When you delete your account, we delete your account data from our server within 30 days, as described in our [Privacy policy](privacy). We cannot recover this information once it has been permanently deleted. Your memory is stored on your Mac, not on our server, so it stays on your Mac until you delete it there.
-3. If you cancel Pro before the end of your current paid-up month or year, you will not be charged again, and Pro stays on until the end of the period you paid for. Then your account goes back to the free plan. We do not automatically prorate unused time in the last billing cycle. See our fair refund policy above.
+3. If you cancel a paid plan before the end of your current paid-up month or year, you will not be charged again, and the plan stays on until the end of the period you paid for. Then your account goes back to the free plan. We do not automatically prorate unused time in the last billing cycle. See our fair refund policy above.
 4. We have the right to suspend or terminate your account and refuse any and all current or future use of our Services for any reason at any time. Suspension means you will not be able to access the account. Termination will furthermore result in the deletion of your account or your access to your account. We also reserve the right to refuse the use of the Services to anyone for any reason at any time. We have this clause because statistically speaking, out of all the accounts on our Services, there may be at least one doing something nefarious. There are some things we staunchly stand against and this clause is how we exercise that stance. For more details, see our [Use Restrictions](#use-restrictions).
 5. Verbal, physical, written or other abuse (including threats of abuse or retribution) of anyone who works on Nomi will result in immediate account termination.
 
