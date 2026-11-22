@@ -288,5 +288,8 @@ DEPENDENCIES
   github-pages
   webrick
 
+RUBY VERSION
+   ruby 3.3.14p208
+
 BUNDLED WITH
-   2.2.22
+   2.7.2
