@@ -14,12 +14,6 @@
 .mi{--mi-apple:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 16'%3E%3Cpath d='M10.8 8.5c0-1.9 1.6-2.8 1.6-2.8-.9-1.3-2.3-1.5-2.8-1.5-1.2-.1-2.3.7-2.9.7-.6 0-1.5-.7-2.5-.7C2.9 4.2 1.7 5 1 6.2c-1.4 2.4-.4 6 1 7.9.7.9 1.4 2 2.4 1.9 1-.1 1.3-.6 2.5-.6s1.5.6 2.5.6 1.7-1 2.3-1.9c.7-1.1 1-2.1 1-2.2 0 0-2-.8-2-3.4ZM8.9 2.8c.5-.7.9-1.6.8-2.5-.8 0-1.7.5-2.3 1.2-.5.6-.9 1.5-.8 2.4.9.1 1.8-.4 2.3-1.1Z'/%3E%3C/svg%3E")}
 .mi-island{position:absolute;top:0;left:50%;translate:-50% 0;background:#000;overflow:hidden;color:#F3F3F3;-webkit-font-smoothing:antialiased;cursor:default;font-family:Inter,system-ui,sans-serif}
 .mi-cat{position:absolute;width:68px;height:68px;pointer-events:none;z-index:2}
-.mi-indicator{position:absolute;right:11px;top:11px;width:16px;height:16px;display:grid;place-items:center;color:#C8C6C6;opacity:0;transition:opacity .2s ease-in-out}
-.mi-indicator.on{opacity:1}
-.mi-island.expanded .mi-indicator{opacity:0;transition:none}
-.mi-wave{display:flex;align-items:center;gap:1.837px}.mi-wave i{display:block;width:1.429px;border-radius:1px;background:currentColor}
-.mi-spinner{color:#F3F3F3;animation:mi-spin .667s steps(8) infinite}
-@keyframes mi-spin{to{rotate:360deg}}
 .mi-utility{position:absolute;top:0;right:16px;height:32px;display:flex;align-items:center;color:#F3F3F3;opacity:0;transition:opacity .16s ease-in-out;pointer-events:none}
 .mi-utility .mi-ic{width:32px;height:22px;border-radius:6px;-webkit-mask:none;mask:none;background:none;position:relative}
 .mi-utility .mi-ic::after{content:"";position:absolute;inset:3px 8px;background:currentColor;-webkit-mask:var(--ic) center/16px 16px no-repeat;mask:var(--ic) center/16px 16px no-repeat}
@@ -73,4 +67,4 @@
 .mi-f.filled:not(.typing) .mi-v{animation:mi-filled 1.2s ease-out}
 @keyframes mi-filled{from{background:#e6f0ff}}
 .mi-clearing .mi-f .mi-v{opacity:0}
-@media (prefers-reduced-motion:reduce){.mi-spinner,.mi-dots i,.mi-caret{animation:none}}
+@media (prefers-reduced-motion:reduce){.mi-dots i,.mi-caret{animation:none}}
